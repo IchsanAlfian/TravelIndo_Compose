@@ -37,11 +37,10 @@ fun TravelIndoApp(
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Main.route) {
-//                MainScreen(
-//                    navigateToDetail = { rewardId ->
-//                        navController.navigate(Screen.DetailPlace.cre)
-//                    }
-//                )
+                MainScreen(
+                    navigateToDetail = {
+                    }
+                )
             }
         }
     }
