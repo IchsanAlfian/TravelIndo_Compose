@@ -10,6 +10,16 @@ class TravelRepository {
         it.id == placeId
     }
 
+    fun getPlaces(): List<Place> {
+        return PlaceData.places
+    }
+
+    fun searchPlaces(query: String): List<Place> {
+        return PlaceData.places.filter {
+            it.name.contains(query, ignoreCase = true)
+        }
+    }
+
     companion object {
         @Volatile
         private var instance: TravelRepository? = null

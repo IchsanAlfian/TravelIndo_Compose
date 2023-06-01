@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Travel Indo Compose</string>
     <string name="back">Back</string>
+    <string name="search_place">Cari Tempat Wisata</string>
 </resources>
