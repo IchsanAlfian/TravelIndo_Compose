@@ -1,4 +1,4 @@
-package com.ichsanalfian.travelindocompose.component
+package com.ichsanalfian.travelindocompose.ui.theme.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
