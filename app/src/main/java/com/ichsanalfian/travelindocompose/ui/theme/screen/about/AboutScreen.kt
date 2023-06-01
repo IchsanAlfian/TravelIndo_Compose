@@ -15,7 +15,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.ichsanalfian.travelindocompose.R
 import com.ichsanalfian.travelindocompose.ui.theme.TravelIndoComposeTheme
-import com.ichsanalfian.travelindocompose.ui.theme.component.PlaceItem
 
 @Composable
 fun AboutScreen(modifier: Modifier = Modifier) {
@@ -45,6 +44,7 @@ fun AboutScreen(modifier: Modifier = Modifier) {
         )
     }
 }
+
 @Preview(showBackground = true, device = Devices.PIXEL_4)
 @Composable
 fun PlaceListItemPreview() {

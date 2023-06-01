@@ -1,22 +1,14 @@
 package com.ichsanalfian.travelindocompose
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.*
-import androidx.compose.material.R
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -25,8 +17,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.ichsanalfian.travelindocompose.ui.theme.component.PlaceItem
-import com.ichsanalfian.travelindocompose.model.PlaceData
 import com.ichsanalfian.travelindocompose.ui.theme.TravelIndoComposeTheme
 import com.ichsanalfian.travelindocompose.ui.theme.navigation.NavigationItem
 import com.ichsanalfian.travelindocompose.ui.theme.navigation.Screen
@@ -68,7 +58,7 @@ fun TravelIndoApp(
             composable(
                 route = Screen.DetailPlace.route,
                 arguments = listOf(navArgument("placeId") { type = NavType.StringType }),
-            ){
+            ) {
                 val id = it.arguments?.getString("placeId") ?: -1L
                 DetailPlaceScreen(
                     placeId = id as String,
@@ -76,31 +66,34 @@ fun TravelIndoApp(
                         navController.navigateUp()
                     },
 
-                )
+                    )
             }
         }
     }
 }
+
 @Composable
 private fun BottomBar(
     navController: NavHostController,
     modifier: Modifier = Modifier
 ) {
     BottomNavigation(
-        modifier = modifier
+        modifier = modifier,
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
         val navigationItems = listOf(
             NavigationItem(
-                title = "Main Page",
+                title = "Home",
                 icon = Icons.Default.Home,
-                screen = Screen.Main
+                screen = Screen.Main,
+                contentDescription = "Home/Main Page"
             ),
             NavigationItem(
-                title = "About Page",
+                title = "About Me",
                 icon = Icons.Default.Person,
-                screen = Screen.About
+                screen = Screen.About,
+                contentDescription = "about_page"
             ),
         )
         BottomNavigation {
@@ -132,7 +125,7 @@ private fun BottomBar(
 
 @Preview(showBackground = true)
 @Composable
-fun TravelIndoAppPreview(){
+fun TravelIndoAppPreview() {
     TravelIndoComposeTheme {
         TravelIndoApp()
     }

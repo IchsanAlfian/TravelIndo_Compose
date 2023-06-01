@@ -9,13 +9,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class DetailPlaceViewModel (
+class DetailPlaceViewModel(
     private val repository: TravelRepository
 ) : ViewModel() {
     private val _uiState: MutableStateFlow<UiState<Place>> =
         MutableStateFlow(UiState.Loading)
     val uiState: StateFlow<UiState<Place>>
         get() = _uiState
+
     fun getDetailPlace(placeId: String) {
         viewModelScope.launch {
             _uiState.value = UiState.Loading

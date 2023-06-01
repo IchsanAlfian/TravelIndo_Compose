@@ -1,11 +1,8 @@
 package com.ichsanalfian.travelindocompose.ui.theme.screen.main
 
-import android.graphics.Movie
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -45,6 +42,7 @@ fun MainScreen(
         }
     }
 }
+
 @Composable
 fun MainContent(
     places: List<Place>,
@@ -59,7 +57,7 @@ fun MainContent(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = modifier
         ) {
-            items(places, key = { it.id}) { place ->
+            items(places, key = { it.id }) { place ->
                 PlaceItem(
                     name = place.name,
                     location = place.location,

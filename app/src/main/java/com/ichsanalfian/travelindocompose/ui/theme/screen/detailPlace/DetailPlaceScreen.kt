@@ -1,6 +1,5 @@
 package com.ichsanalfian.travelindocompose.ui.theme.screen.detailPlace
 
-import androidx.annotation.DrawableRes
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -10,15 +9,11 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.*
-import androidx.compose.runtime.R
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
@@ -27,7 +22,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import com.ichsanalfian.travelindocompose.di.Injection
-import com.ichsanalfian.travelindocompose.model.Place
 import com.ichsanalfian.travelindocompose.ui.theme.TravelIndoComposeTheme
 import com.ichsanalfian.travelindocompose.ui.theme.ViewModelFactory
 import com.ichsanalfian.travelindocompose.ui.theme.common.UiState
@@ -61,6 +55,7 @@ fun DetailPlaceScreen(
         }
     }
 }
+
 @Composable
 fun DetailContent(
     name: String,
@@ -81,7 +76,8 @@ fun DetailContent(
                     model = photoUrl,
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
-                    modifier = modifier.height(400.dp)
+                    modifier = modifier
+                        .height(400.dp)
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp))
                 )
@@ -120,17 +116,19 @@ fun DetailContent(
                 )
             }
         }
-        Spacer(modifier = Modifier
-            .fillMaxWidth()
-            .height(4.dp)
-            .background(Color.LightGray))
+        Spacer(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(4.dp)
+                .background(Color.LightGray)
+        )
     }
 }
 
 @Preview(showBackground = true, device = Devices.PIXEL_4)
 @Composable
 fun DetailContentPreview() {
-    TravelIndoComposeTheme{
+    TravelIndoComposeTheme {
         DetailContent(
             "Candi Borobudur",
             "Jawa Tengah",
