@@ -39,6 +39,7 @@ fun TravelIndoApp(
             composable(Screen.Main.route) {
                 MainScreen(
                     navigateToDetail = {
+                        navController.navigate(Screen.DetailPlace.createRoute(it))
                     }
                 )
             }
