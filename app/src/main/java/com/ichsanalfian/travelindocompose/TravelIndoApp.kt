@@ -3,6 +3,9 @@ package com.ichsanalfian.travelindocompose
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Text
@@ -15,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import com.ichsanalfian.travelindocompose.component.PlaceItem
 import com.ichsanalfian.travelindocompose.model.PlaceData
 import com.ichsanalfian.travelindocompose.ui.theme.TravelIndoComposeTheme
 
@@ -23,10 +27,17 @@ fun TravelIndoApp(
     modifier: Modifier = Modifier
 ) {
     Box(modifier = modifier) {
-        LazyColumn {
+        LazyVerticalGrid(
+            columns = GridCells.Adaptive(160.dp),
+            contentPadding = PaddingValues(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            modifier = modifier
+        ) {
             items(PlaceData.places, key = { it.id}) { place ->
-                PlaceListItem(
+                PlaceItem(
                     name = place.name,
+                    location = place.location,
                     photoUrl = place.photoUrl,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -42,40 +53,3 @@ fun TravelIndoAppPreview(){
     }
 }
 
-@Composable
-fun PlaceListItem(
-    name : String,
-    photoUrl: String,
-    modifier: Modifier = Modifier
-){
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier.clickable {}
-    ) {
-        AsyncImage(
-            model = photoUrl,
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .padding(8.dp)
-                .size(60.dp)
-                .clip(CircleShape)
-        )
-        Text(
-            text = name,
-            fontWeight = FontWeight.Medium,
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(1f)
-                .padding(start = 16.dp)
-        )
-    }
-}
-@Preview(showBackground = true)
-@Composable
-fun PlaceListItemPreview(){
-    TravelIndoComposeTheme {
-        PlaceListItem(name = "Goa Pindul", photoUrl = "")
-
-    }
-}

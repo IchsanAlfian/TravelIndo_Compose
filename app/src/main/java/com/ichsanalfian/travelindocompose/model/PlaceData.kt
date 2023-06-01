@@ -18,18 +18,18 @@ object PlaceData {
         ),
         Place(
             "3",
-            "Taman Nasional Way Kambas",
-            "Lampung",
-            "https://images.tokopedia.net/img/JFrBQq/2022/6/20/7119654e-2bc3-48cb-a74e-5a7355863467.jpg",
-            "Terletak di ujung selatan Sumatera atau 110 km dari Bandar Lampung, TNKW merupakan salah satu Taman Nasional pertama dan tertua di Indonesia. Taman Nasional ini menempati 1.300 km persegi dari hutan dataran rendah pantai sekitar Sungai Way Kambas di pantai timur Provinsi Lampung. TNWK dikenal dengan konservasi gajah, karena selain menjadi tempat perlindungan bagi Gajah Sumatera yang berjumlah sekitar 200, taman nasional ini juga dikenal sebagai tempat latihan mereka. Way Kambas didirikan oleh pemerintah Belanda pada tahun 1937 sampai sekarang masih terjaga sebagai Taman Nasional."
-        ),
+            "Wakatobi",
+            "Sulawesi Tenggara",
+            "https://images.tokopedia.net/blog-tokopedia-com/uploads/2018/11/wakatobi.jpg",
+           "Masih di Pulau Sulawesi, Taman Nasional Wakatobi juga merupakan salah satu tujuan wisata bawah laut yang populer dan mendunia. Dengan luas mencapai 13.900 km2, tujuan wisata terkenal asal Indonesia ini memiliki tak kurang dari 112 jenis terumbu karang yang bersimbiosis dengan ikan-ikan bawah laut sehingga menciptakan panorama bawah laut yang tiada tanding."
+            ),
         Place(
             "4",
-            "Pantai Parai Tenggiri",
-            "Bangka Belitung",
-            "https://images.tokopedia.net/blog-tokopedia-com/uploads/2020/06/Pantai-Parai-Tenggiri.jpg",
-            "Pasti diantara kamu sudah pernah menyaksikan film populer Laskar Pelangi yang berlatar di Pulang Belitung, bukan? Selain alur ceritanya yang menarik, lokasi film ini juga banyak menyita perhatian penonton. Berbeda dengan pantai lain pada umumnya, Parai Tenggiri memiliki struktur pantai yang landai dengan air laut berwarna hijau toska serta pasir putihnya yang lembut. Ombak di pantai ini juga tenang sehingga menjadi salah satu alasan yang menarik bagi wisatawan yang senang berenang."
-        ),
+            "Pulau Komodo",
+            "Nusa Tenggara Barat",
+            "https://images.tokopedia.net/blog-tokopedia-com/uploads/2018/11/pulau-komodo.jpg",
+           "Destinasi wisata Indonesia yang tersohor di mata dunia selanjutnya adalah Pulau Komodo. Pulau yang berlokasi di Kepulauan Nusa Tenggara Timur ini merupakan rumah bagi ratusan Komodo, hewan endemik yang hanya ada di Indonesia. Selain bisa mengamati perilaku dan mengeksplorasi habitat dari hewan purba ini, Pulau Komodo juga menawarkan panorama alam yang menakjubkan."
+            ),
         Place(
             "5",
             "Nusa Dua",
