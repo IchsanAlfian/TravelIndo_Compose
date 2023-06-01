@@ -22,10 +22,11 @@ fun PlaceItem(
     name: String,
     location: String,
     photoUrl: String,
+    onItemClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = modifier.clickable { },
+        modifier = modifier.clickable { onItemClick() },
         shape = Shapes.medium,
         elevation = 4.dp
     ) {
@@ -68,9 +69,9 @@ fun PlaceItem(
 
 @Preview(showBackground = true)
 @Composable
-fun PlaceListItemPreview(){
+fun PlaceListItemPreview() {
     TravelIndoComposeTheme {
-        PlaceItem(name = "Goa Pindul", photoUrl = "", location = "Jawa Timur")
+        PlaceItem(name = "Goa Pindul", photoUrl = "", location = "Jawa Timur", onItemClick = {})
 
     }
 }

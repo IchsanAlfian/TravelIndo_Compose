@@ -90,7 +90,9 @@ fun DetailContent(
                     contentDescription = null,
                     modifier = Modifier
                         .padding(16.dp)
-                        .clickable { onBackClick() }
+                        .size(50.dp)
+                        .clickable { onBackClick() },
+                    tint = Color.Black
                 )
             }
             Column(

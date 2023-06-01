@@ -64,9 +64,7 @@ fun MainContent(
                     name = place.name,
                     location = place.location,
                     photoUrl = place.photoUrl,
-                    modifier = Modifier.clickable {
-                        navigateToDetail(place.id)
-                    }
+                    onItemClick = { navigateToDetail(place.id) }
                 )
             }
         }
